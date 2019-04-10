@@ -1,0 +1,50 @@
+<mvc:View xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" controllerName="StartUIApplication.StartUIApplication.controller.SelectBPView" displayBlock="true" xmlns:form="sap.ui.layout.form">
+	<Page showHeader="true">
+		<customHeader>
+			<Toolbar>
+				<Image	src="../model/sap.png" densityAware="false" width="auto" height="100%" alt="SAP Logo"/>
+				<ToolbarSpacer/>
+				<Button text="{UserModel>/displayName}" width="auto" id="userButton" icon="sap-icon://account" enabled="true"/>
+			</Toolbar>
+		</customHeader>
+		<content>
+			<HBox height="auto" alignItems="Center" justifyContent="SpaceAround" fitContainer="false">
+	            <items>
+	                <form:Form width="auto" editable="true" visible="true">
+	                    <form:title>
+	                        <core:Title text="{i18n>selectBupaToChange}" level="Auto"/>
+	                    </form:title>
+	                    <form:formContainers>
+	                        <form:FormContainer visible="true">
+	                            <form:formElements>
+	                                <form:FormElement visible="true">
+	                                    <form:label>
+	                                        <Label text="" design="Standard" width="auto" required="false" textAlign="Begin" textDirection="Inherit"/>
+	                                    </form:label>
+	                                    <form:fields>
+	                                        <Input id="businessPartner" type="Text" showValueHelp="true" enabled="true" visible="true" width="auto" valueHelpOnly="false" 
+	                                        	maxLength="0" placeholder="{i18n>enterBusinessPartner}" valueHelpRequest="handleValueHelp"/>
+	                                    </form:fields>
+	                                </form:FormElement>
+	                            </form:formElements>
+	                            <form:title/>
+	                        </form:FormContainer>
+	                    </form:formContainers>
+	                    <form:layout>
+	                        <form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1" labelSpanM="2" labelSpanS="12"/>
+	                    </form:layout>
+	                </form:Form>
+	            </items>
+            	<layoutData/>
+        	</HBox>
+		</content>
+		<footer>
+			<OverflowToolbar>
+				<ToolbarSpacer/>
+				<Button id="startButton" text="{i18n>createRequest}" type="Accept" enabled="true" visible="true" 
+	                    iconDensityAware="false" press="onStartPress"/>
+			</OverflowToolbar>
+		</footer>
+	</Page>
+</mvc:View>

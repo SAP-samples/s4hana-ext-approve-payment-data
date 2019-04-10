@@ -1,0 +1,23 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <Dialog id="idChooseBankDialog" resizable="false" title="{i18n>chooseBank}" >
+        <Toolbar>
+            <SearchField
+                    id="searchField"
+                    liveChange="onSearch"
+                    width="100%"/>
+        </Toolbar>
+        <List id="idChooseBankList" mode="SingleSelectMaster"
+              items="{
+						path: 'bankModel>/d/results/',
+						sorter: { path: 'BankName' }
+					}"
+              selectionChange="onChooseBank" growing="true"
+              growingThreshold="300" growingScrollToLoad="true" noDataText="{i18n>noBanks}">
+            <StandardListItem title="{bankModel>BankName}"
+                              description="{bankModel>BankInternalID}"/>
+        </List>
+        <buttons>
+            <Button text="{i18n>cancel}" press="onCancel"/>
+        </buttons>
+    </Dialog>
+</core:FragmentDefinition>

@@ -1,0 +1,23 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <Dialog id="idChooseCountryDialog" resizable="false" title="{i18n>chooseCountry}">
+        <Toolbar>
+            <SearchField
+                    id="searchField"
+                    liveChange="onSearch"
+                    width="100%"/>
+        </Toolbar>
+        <List id="idChooseCountryList" mode="SingleSelectMaster"
+              items="{
+						path: 'countriesISOModelJSON>/d/results/',
+						sorter: { path: 'Country' }
+					}"
+              selectionChange="onChooseCountry" growing="true"
+              growingThreshold="300" growingScrollToLoad="true">
+            <StandardListItem title="{countriesISOModelJSON>Country}"
+                              description="{countriesISOModelJSON>CountryName}"/>
+        </List>
+        <buttons>
+            <Button text="{i18n>cancel}" press="onCancel"/>
+        </buttons>
+    </Dialog>
+</core:FragmentDefinition>

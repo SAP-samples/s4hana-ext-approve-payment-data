@@ -1,0 +1,35 @@
+{
+    "application": {
+        "id": "",
+        "title": "StartUIApplication.StartUIApplication.startuiapplication",
+        "description": "Change Business Partner Payment Data",
+        "type": "SAP_UI5_Component",
+        "componentUrl": "/",
+        "appUrl": "#startuiapplication-Display",
+        "navigationComponentName": "StartUIApplication.StartUIApplication",
+        "intentSemanticObject": "startuiapplication",
+        "intentAction": "Display",
+        "html5ApplicationName": "startuiapplication",
+        "HCPParentApplicationName": ""
+    },
+    "assignment": {
+        "groups": [
+            "5df8b5ce-4525-4e86-9e7c-c8c4df2f37dd"
+        ],
+        "contentPackages": [
+            "5dbfc7af-c9f4-4719-9f2e-a27cb69f4a98"
+        ],
+        "categories": []
+    },
+    "tile": {
+        "type": "StaticTile",
+        "title": "Change Payment Data",
+        "subtitle": "on Business Partner",
+        "searchKeywords": "Change Payment Data,on Business Partner",
+        "displayIconUrl": "sap-icon://payment-approval",
+        "displayInfoText": "",
+        "size": "1x1",
+        "serviceURL": "",
+        "refreshInterval": ""
+    }
+}

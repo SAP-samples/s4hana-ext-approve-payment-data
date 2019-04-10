@@ -1,0 +1,14 @@
+<core:FragmentDefinition
+        xmlns="sap.m"
+        xmlns:core="sap.ui.core"
+        xmlns:f="sap.ui.layout.form">
+    <Dialog title="{i18n>addPaymentData}" contentWidth="630px" resizable="false" busyIndicatorDelay="0"
+            busy="{uiModel>/busy.addExtension}" beforeClose="onBeforeClose">
+
+        <core:Fragment fragmentName="com.sap.workflow.ChangePaymentData.view.PaymentDataForms" type="XML"/>
+        <buttons>
+            <Button text="{i18n>save}" type="Accept" press="onSave" icon="sap-icon://add"/>
+            <Button text="{i18n>cancel}" press="onCancel"/>
+        </buttons>
+    </Dialog>
+</core:FragmentDefinition>

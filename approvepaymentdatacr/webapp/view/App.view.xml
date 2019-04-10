@@ -1,0 +1,4 @@
+<mvc:View controllerName="com.sap.workflow.approvechangerequest.approvePaymentDataCR.controller.App" xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
+	<App id="idAppControl"/>
+</mvc:View>

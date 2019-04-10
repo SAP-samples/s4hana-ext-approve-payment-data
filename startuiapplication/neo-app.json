@@ -1,0 +1,48 @@
+{
+  "welcomeFile": "/webapp/index.html",
+  "routes": [
+    {
+      "path": "bpmworkflowruntime",
+      "target": {
+        "type": "destination",
+        "name": "bpmworkflowruntime",
+        "entryPath": "/workflow-service"
+      },
+      "description": "Workflow Service Runtime"
+    },
+    {
+      "path": "/resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/resources"
+      },
+      "description": "SAPUI5 Resources"
+    },
+    {
+      "path": "/test-resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/test-resources"
+      },
+      "description": "SAPUI5 Test Resources"
+    },
+    {
+      "path": "/destinations/S4HANA",
+      "target": {
+        "type": "destination",
+        "name": "ChangePaymentDataWorkflow2S4HANA"
+      },
+      "description": "destination to the backend S4 system"
+    },
+    {
+    	"path": "/services/userapi",
+        "target": {
+            "type": "service",
+            "name": "userapi"
+        }
+    }
+  ],
+  "sendWelcomeFileRedirect": true
+}

@@ -1,0 +1,83 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:form="sap.ui.layout.form"
+	xmlns:core="sap.ui.core" controllerName="com.sap.workflow.approvechangerequest.approvePaymentDataCR.controller.approveChangeRequest"
+	displayBlock="true">
+	<Page id="pageId" title="{i18n>title}" showHeader="false">
+		<content>
+			<ObjectHeader intro="{/bupaData/d/BusinessPartnerFullName}" title="{/task/Title}" icon="sap-icon://payment-approval" number="" numberUnit=""
+				numberState="None" backgroundDesign="Translucent" condensed="false">
+				<attributes>
+					<ObjectAttribute title="{i18n>createdOn}" text="{/task/CreatedOn}"/>
+					<ObjectAttribute title="{i18n>description}" text="{/task/Description}"/>
+					<ObjectAttribute title="{i18n>businessPartner}" text="{/bupaData/d/BusinessPartner}" press="handleLinkPress" active="true"/> 
+				</attributes>
+				<statuses>
+					<ObjectStatus text="{/task/Status}" state="Success"/>
+					<ObjectStatus text="{/task/Priority}" state="None"/>
+				</statuses>
+			</ObjectHeader>
+			<Table id="tableBanks" width="100%" noDataText="{i18n>noData}" mode="SingleSelectMaster" showSeparators="All" growing="true" growingThreshold="20"
+				growingScrollToLoad="true" items="{/ChangedBankingData/}" selectionChange="onSelectionChange" includeItemInSelection="true">
+				<columns>
+					<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+						<header>
+							<Text text="{i18n>country}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit"/>
+						</header>
+						<footer/>
+					</Column>
+					<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+						<header>
+							<Text text="{i18n>bankNumber}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit"/>
+						</header>
+						<footer/>
+					</Column>
+					<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+						<header>
+							<Text text="{i18n>bankName}" width="auto" maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit"/>
+						</header>
+						<footer/>
+					</Column>
+					<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+						<header>
+							<Text text="{i18n>accountNumber}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit"/>
+						</header>
+						<footer/>
+					</Column>
+					<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+						<header>
+							<Text text="{i18n>accountHolderName}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit"/>
+						</header>
+						<footer/>
+					</Column>
+					<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+						<header>
+							<Text text="{i18n>validFrom}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit"/>
+						</header>
+						<footer/>
+					</Column>
+					<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+						<header>
+							<Text text="{i18n>status}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit"/>
+						</header>
+						<footer/>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem type="Active">
+						<cells>
+							<ObjectIdentifier title="{BankCountryKey}"
+                                              text="{path:'BankCountryKey', formatter: '.formatter.formatCountry'}"
+                                              titleActive="false" visible="true"/>
+							<Text text="{BankNumber}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit"/>
+							<Text text="{BankName}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit"/>
+							<Text text="{BankAccount}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit"/>
+							<Text text="{BankAccountHolderName}" width="auto" wrapping="true" textAlign="Begin" textDirection="Inherit"/>
+							<Text text="{ path: 'ValidityStartDate', type: '.types.customDateType' }" width="auto" wrapping="true" textAlign="Begin"
+								textDirection="Inherit"/>
+							<ObjectStatus text="{path: 'Status', formatter: '.formatter.formatStatusText'}" state="{path: 'Status', formatter: '.formatter.formatStatus'}"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</content>
+	</Page>
+</mvc:View>

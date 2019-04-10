@@ -1,0 +1,154 @@
+<core:FragmentDefinition
+        xmlns="sap.m"
+        xmlns:core="sap.ui.core"
+        xmlns:form="sap.ui.layout.form">
+
+    <form:Form width="auto" editable="true" class="sapUiResponsiveMargin">
+        <form:title>
+            <core:Title text="{i18n>bankData}" level="Auto"/>
+        </form:title>
+        <form:formContainers>
+            <form:FormContainer visible="true">
+                <form:formElements>
+                    <form:FormElement visible="true">
+                        <form:label>
+                            <Label text="{i18n>country}" design="Standard" width="100%"
+                                   textAlign="Begin" textDirection="Inherit"/>
+                        </form:label>
+                        <form:fields>
+                            <Input value="{path:'BankCountryKey',
+                                           type: 'sap.ui.model.type.String',
+                                           formatter: '.formatter.formatCountry',
+                                           constraints : {
+                                               minLength : 1
+                                           }}"
+                                           
+                                   type="Text"
+                                   showValueHelp="true" valueHelpOnly="true"
+                                   valueHelpRequest="onCountryValueHelp" width="auto"
+                                   enabled="{path: 'Status', formatter: '.formatter.formatInput'}"
+                                   id="countryInput" required="true"
+                                   change="onFieldChange"/>
+                        </form:fields>
+                    </form:FormElement>
+                    <form:FormElement visible="true">
+                        <form:label>
+                            <Label text="{i18n>bankNumber}" design="Standard" width="100%"
+                                   textAlign="Begin" textDirection="Inherit"/>
+                        </form:label>
+                        <form:fields>
+                            <Input value="{ path: 'BankNumber',
+                                            type: 'sap.ui.model.type.String',
+                                            constraints : {
+                                                minLength : 1
+                                            }}"
+                                   type="Text" showValueHelp="true" valueHelpRequest="onBankValueHelp"
+                                   width="auto" valueHelpOnly="true" id="bankInput"
+                                   enabled="{path: 'Status', formatter: '.formatter.formatInput'}"
+                                   change="onFieldChange" required="true"/>
+                        </form:fields>
+                    </form:FormElement>
+                    <form:FormElement visible="true">
+                        <form:label>
+                            <Label text="{i18n>bankName}" design="Standard" width="100%"
+                                   textAlign="Begin" textDirection="Inherit"/>
+                        </form:label>
+                        <form:fields>
+                        	<Text text="{path: 'BankName',
+                                           type: 'sap.ui.model.type.String'}"
+                                    textAlign="Begin" textDirection="Inherit"/>
+                        </form:fields>
+                    </form:FormElement>
+                    <form:FormElement visible="true">
+                        <form:label>
+                            <Label text="{i18n>SWIFTCode}" design="Standard" width="100%"
+                                   textAlign="Begin" textDirection="Inherit"/>
+                        </form:label>
+                        <form:fields>
+                        	<Text text="{path: 'SWIFTCode',
+                                           type: 'sap.ui.model.type.String'}"
+                                    textAlign="Begin" textDirection="Inherit"/>
+                        </form:fields>
+                    </form:FormElement>
+                </form:formElements>
+                <form:title/>
+            </form:FormContainer>
+        </form:formContainers>
+        <form:layout>
+            <form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1"
+                                       labelSpanM="2" labelSpanS="12"/>
+        </form:layout>
+    </form:Form>
+
+    <form:Form width="auto" editable="true" class="sapUiResponsiveMargin">
+        <form:title>
+            <core:Title text="{i18n>accountData}" level="Auto"/>
+        </form:title>
+        <form:formContainers>
+            <form:FormContainer visible="true">
+                <form:formElements>
+                    <form:FormElement visible="true">
+                        <form:label>
+                            <Label text="{i18n>accountHolderName}" design="Standard" width="100%"
+                                   textAlign="Begin" textDirection="Inherit"/>
+                        </form:label>
+                        <form:fields>
+                            <Input value="{ path: 'BankAccountHolderName',
+                                            type: 'sap.ui.model.type.String'}"
+                                   enabled="{path: 'Status', formatter: '.formatter.formatInput'}"
+                                   type="Text" width="auto" change="onFieldChange"/>
+                        </form:fields>
+                    </form:FormElement>
+                    <form:FormElement visible="true">
+                        <form:label>
+                            <Label text="{i18n>accountNumber}" design="Standard" width="100%"
+                                   textAlign="Begin" textDirection="Inherit"/>
+                        </form:label>
+                        <form:fields>
+                            <Input value="{ path: 'BankAccount',
+                                            type: 'sap.ui.model.type.String',
+                                            constraints : {
+                                                minLength : 1
+                                            }}"
+                                   type="Text" showValueHelp="false" width="auto"
+                                   valueHelpOnly="false"
+                                   enabled="{path: 'Status', formatter: '.formatter.formatInput'}"
+                                   change="onFieldChange" required="true"/>
+                        </form:fields>
+                    </form:FormElement>
+                    <form:FormElement visible="true">
+                        <form:label>
+                            <Label text="{i18n>IBAN}" design="Standard" width="100%" required="false"
+                                   textAlign="Begin" textDirection="Inherit"/>
+                        </form:label>
+                        <form:fields>
+                            <Input value="{IBAN}" type="Text" showValueHelp="false"
+                                   visible="true" width="auto" valueHelpOnly="false"
+                                   enabled="{path: 'Status', formatter: '.formatter.formatInput'}"
+                                   change="onFieldChange"/>
+                        </form:fields>
+                    </form:FormElement>
+                    <form:FormElement visible="true">
+                        <form:label>
+                            <Label text="{i18n>validFrom}" design="Standard" width="100%" required="false"
+                                   textAlign="Begin" textDirection="Inherit"/>
+                        </form:label>
+                        <form:fields>
+                            <DatePicker value="{path: 'ValidityStartDate', type: '.types.customDateType'}"
+                                        placeholder="{i18n>enterDate}" valueFormat="yyyy-MM-dd"
+                                        class="sapUiSmallMarginBottom"
+                                        enabled="{path: 'Status', formatter: '.formatter.formatInput'}"
+                                        change="onFieldChange"/>
+                        </form:fields>
+                    </form:FormElement>
+                </form:formElements>
+                <form:title/>
+            </form:FormContainer>
+        </form:formContainers>
+        <form:layout>
+            <form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1"
+                                       labelSpanM="2" labelSpanS="12"/>
+        </form:layout>
+    </form:Form>
+
+</core:FragmentDefinition>

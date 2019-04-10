@@ -1,0 +1,165 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form">
+	<HBox id="paymentDataForms" height="100%" visible="true" alignItems="Start" justifyContent="SpaceAround">
+		<items>
+			<form:Form width="auto" editable="true" class="sapUiResponsiveMargin">
+				<form:title>
+					<core:Title text="{i18n>currentPaymentData}" level="Auto"/>
+				</form:title>
+					<form:formContainers>
+						<form:FormContainer visible="true">
+							<form:formElements>
+								<form:FormElement visible="true">
+									<form:label>
+										<Label text="{i18n>country}" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" />
+									</form:label>
+									<form:fields>
+										<Text text="{BankCountryKey}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" />
+									</form:fields>
+								</form:FormElement>
+								<form:FormElement visible="true">
+									<form:label>
+										<Label text="{i18n>bankName}" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+									</form:label>
+									<form:fields>
+										<Text text="{BankName}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+									</form:fields>
+								</form:FormElement>
+								<form:FormElement visible="true">
+									<form:label>
+										<Label text="{i18n>bankNumber}" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+									</form:label>
+									<form:fields>
+										<Text text="{BankNumber}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+									</form:fields>
+								</form:FormElement>
+								<form:FormElement visible="true">
+									<form:label>
+										<Label text="{i18n>accountNumber}" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+									</form:label>
+									<form:fields>
+										<Text text="{BankAccount}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+									</form:fields>
+								</form:FormElement>
+								<form:FormElement visible="true">
+									<form:label>
+										<Label text="{i18n>accountHolderName}" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+									</form:label>
+									<form:fields>
+										<Text text="{BankAccountHolderName}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+									</form:fields>
+								</form:FormElement>
+								<form:FormElement visible="true">
+									<form:label>
+										<Label text="{i18n>SWIFTCode}" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+									</form:label>
+									<form:fields>
+										<Text text="{SWIFTCode}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+									</form:fields>
+								</form:FormElement>
+								<form:FormElement visible="true">
+									<form:label>
+										<Label text="{i18n>IBAN}" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+									</form:label>
+									<form:fields>
+										<Text text="{IBAN}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+									</form:fields>
+								</form:FormElement>
+								<form:FormElement visible="true">
+									<form:label>
+										<Label text="{i18n>validFrom}" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+									</form:label>
+									<form:fields>
+										<Text text="{ path: 'ValidityStartDate', type: '.types.customDateType' }" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+									</form:fields>
+								</form:FormElement>
+							</form:formElements>
+							<form:title/>
+						</form:FormContainer>
+					</form:formContainers>
+					<form:layout>
+						<form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1" labelSpanM="2" labelSpanS="12"/>
+					</form:layout>
+				</form:Form>
+				<form:Form width="auto" editable="true" visible="true" class="sapUiResponsiveMargin">
+					<form:title>
+						<core:Title text="{i18n>currentPaymentData}" level="Auto"/>
+					</form:title>
+					<form:formContainers>
+						<form:FormContainer visible="true">
+							<form:formElements>
+								<form:FormElement visible="true">
+									<form:label>
+										<Label text="{i18n>country}" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+									</form:label>
+									<form:fields>
+										<Text text="{BankCountryKey}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+									</form:fields>
+								</form:FormElement>
+								<form:FormElement visible="true">
+									<form:label>
+										<Label text="{i18n>bankName}" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+									</form:label>
+									<form:fields>
+										<Text text="{BankName}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+									</form:fields>
+								</form:FormElement>
+								<form:FormElement visible="true">
+									<form:label>
+										<Label text="{i18n>bankNumber}" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+									</form:label>
+									<form:fields>
+										<Text text="{BankNumber}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+									</form:fields>
+								</form:FormElement>
+								<form:FormElement visible="true">
+									<form:label>
+										<Label text="{i18n>accountNumber}" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+									</form:label>
+									<form:fields>
+										<Text text="{BankAccount}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+									</form:fields>
+								</form:FormElement>
+								<form:FormElement visible="true">
+									<form:label>
+										<Label text="{i18n>accountHolderName}" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+									</form:label>
+									<form:fields>
+										<Text text="{BankAccountHolderName}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+									</form:fields>
+								</form:FormElement>
+								<form:FormElement visible="true">
+									<form:label>
+										<Label text="{i18n>SWIFTCode}" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+									</form:label>
+									<form:fields>
+										<Text text="{SWIFTCode}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+									</form:fields>
+								</form:FormElement>
+								<form:FormElement visible="true">
+									<form:label>
+										<Label text="{i18n>IBAN}" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+									</form:label>
+									<form:fields>
+										<Text text="{IBAN}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+									</form:fields>
+								</form:FormElement>
+								<form:FormElement visible="true">
+									<form:label>
+										<Label text="{i18n>validFrom}" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+									</form:label>
+									<form:fields>
+										<Text text="{ path: 'ValidityStartDate', type: '.types.customDateType' }" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+									</form:fields>
+								</form:FormElement>
+							</form:formElements>
+							<form:title/>
+						</form:FormContainer>
+					</form:formContainers>
+					<form:layout>
+						<form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1" labelSpanM="2" labelSpanS="12"/>
+					</form:layout>
+				</form:Form>
+			</items>
+			<layoutData/>
+		</HBox>
+</core:FragmentDefinition>
