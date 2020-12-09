@@ -1,3 +1,5 @@
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/s4hana-ext-approve-payment-data)](https://api.reuse.software/info/github.com/SAP-samples/s4hana-ext-approve-payment-data)
+
 # SAP S/4HANA Cloud Extensions: Change Payment Information Through Approval Workflow
 This repository contains the sample code for the [Change Payment Information Through Approval Workflow tutorial](http://tiny.cc/s4-approve-payment-data).
 
