@@ -16,7 +16,7 @@ SAP Extensibility Explorer is a central place where anyone involved in the exten
 
 Requirements
 -------------
-- An SAP Cloud Platform subaccount in the Neo environment with the Workflow, Portal and SAP Web IDE Full Stack services enabled.
+- An SAP Business Technology Platform (BTP) subaccount in the Neo environment with the Workflow, Portal and SAP Web IDE Full Stack services enabled.
 - An SAP S/4HANA Cloud tenant. **This is a commercial paid product.**
 
 Download and Installation
